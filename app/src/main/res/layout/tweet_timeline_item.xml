@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="8dp"
+    card_view:contentPadding="10dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:padding="10dp"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/ivUser"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:padding="5dp" />
+
+        <RelativeLayout
+            android:id="@+id/rlTweet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:padding="5dp"
+                android:text="Name"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tvName"
+                android:layout_toRightOf="@id/tvName"
+                android:text="UserName"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvTimeStamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignBaseline="@id/tvUserName"
+                android:text="min "/>
+
+            <TextView
+                android:id="@+id/tvBodyTweet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvName"
+                android:padding="5dp"
+                android:text="Tweet Body" />
+
+            <LinearLayout
+                android:id="@+id/lnReactTweet"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_below="@id/tvBodyTweet"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ImageButton
+                    android:id="@+id/ibtReply"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/reply" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/ibtRetweet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:background="@color/white"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/retweet" />
+
+                    <TextView
+                        android:id="@+id/tvCountRetweet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="12"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/ibtFavorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/unfavorite" />
+
+                    <TextView
+                        android:id="@+id/tvCountFavorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="12"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

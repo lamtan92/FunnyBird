@@ -1,13 +1,13 @@
-package com.lamtran.funnybird;
+package com.lamtran.funnybird.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 
 import com.codepath.oauth.OAuthLoginActionBarActivity;
-import com.codepath.oauth.OAuthLoginActivity;
+import com.lamtran.funnybird.R;
+import com.lamtran.funnybird.RestClient;
 
 public class LoginActivity extends OAuthLoginActionBarActivity<RestClient> {
 
@@ -29,9 +29,9 @@ public class LoginActivity extends OAuthLoginActionBarActivity<RestClient> {
 	// i.e Display application "homepage"
 	@Override
 	public void onLoginSuccess() {
-//		 Intent i = new Intent(this, PhotosActivity.class);
-//		 startActivity(i);
-		Log.d("Login", "Success");
+		 Intent i = new Intent(this, TimeLineActivity.class);
+		 startActivity(i);
+//		Log.d("Login", "Success");
 	}
 
 	// OAuth authentication flow failed, handle the error
